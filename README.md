@@ -34,5 +34,7 @@ Model evaluation leads a Data Scientist in the right direction to select or tune
 ## REFERENCE 
 
 https://scikit-learn.org/
+
 https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
+
 https://openclassrooms.com/en/courses/6401081-improve-the-performance-of-a-machine-learning-model/6519016-evaluate-the-performance-of-a-regression-model
