@@ -2,23 +2,43 @@
 
 Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable (s) (predictor). In simple terms the regression can be defined as, “Using the relationship between variables to find the best fit line or the regression equation that can be used to make predictions”.
 
+![Regression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/Regression.png)
+
 This technique is used for forecasting, time series modelling and finding the causal effect relationship between the variables. There are various kinds of regression techniques available to make predictions. These techniques are mostly driven by three metrics (number of independent variables, type of dependent variables and shape of regression line).
 
 ## 1. Linear Regression
 
-Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables.  The simplest form of the regression equation with one dependent and one independent variable is defined by the formula 
+The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable). When there is only feature it is called Uni-variate Linear Regression and if there are multiple features, it is called Multiple Linear Regression.
+![DiffLinearRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/DiffLinearRegression.png)
 
-**y = c + b * x ** 
+The linear regression model can be represented by the following equation
 
-where y = estimated dependent variable score, **c** = constant, **b** = regression coefficient, and **x** = score on the independent variable.
+![LinearRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/LinearRegression.png)
 
-Three major uses for regression analysis are (1) determining the strength of predictors, (2) forecasting an effect, and (3) trend forecasting.
+**Y** is the predicted value
+**θ₀** is the bias term.
+**θ₁,…,θₙ** are the model parameters
+**x₁, x₂,…,xₙ** are the feature values.
 
-First, the regression might be used to identify the strength of the effect that the independent variable(s) have on a dependent variable.  Typical questions are what is the strength of relationship between dose and effect, sales and marketing spending, or age and income.
+The line for which the the error between the predicted values and the observed values is minimum is called the best fit line or the regression line. These errors are also called as residuals. The residuals can be visualized by the vertical lines from the observed data value to the regression line.
+![LinearRegressionLine](https://github.com/Ansu-John/Regression-Models/blob/main/resources/LinearRegressionLine.png)
 
-Second, it can be used to forecast effects or impact of changes.  That is, the regression analysis helps us to understand how much the dependent variable changes with a change in one or more independent variables.  A typical question is, “how much additional sales income do I get for each additional $1000 spent on marketing?”
+To define and measure the error of our model we define the cost function as the sum of the squares of the residuals. The cost function is denoted by
+![costFunction](https://github.com/Ansu-John/Regression-Models/blob/main/resources/costFunction.png)
+where the hypothesis function h(x) is denoted by
+![hypothesisFunction](https://github.com/Ansu-John/Regression-Models/blob/main/resources/hypothesisFunction.png)
+and m is the total number of training examples in our data-set.
 
-Third, regression analysis predicts trends and future values.  The regression analysis can be used to get point estimates.  A typical question is, “what will the price of gold be in 6 months?”
+Our objective is to find the model parameters so that the cost function is minimum. We will use Gradient Descent to find this.
+### Cost Function
+Cost Function is a function that measures the performance of a Machine Learning model for given data.
+Cost Function is basically the calculation of the error between predicted values and expected values and presents it in the form of a single real number.
+Many people gets confused between Cost Function and Loss Function,
+Well to put this in simple terms Cost Function is the average of error of n-sample in the data and Loss Function is the error for individual data points.In other words,Loss Function is for one training example,Cost Function is the for the entire training set.
+### Gradient descent
+Gradient descent is an optimization algorithm used to find the values of parameters (coefficients) of a function (f) that minimizes a cost function (cost). Gradient descent is best used when the parameters cannot be calculated analytically (e.g. using linear algebra) and must be searched for by an optimization algorithm.
++ Batch gradient descent refers to calculating the derivative from all training data before calculating an update.
++ Stochastic gradient descent refers to calculating the derivative from each training data instance and calculating the update immediately.
 
 ## 2. Logistic Regression
 
@@ -39,6 +59,11 @@ Three or more categories without ordering. Example: Predicting which food is pre
 Three or more categories with ordering. Example: Movie rating from 1 to 5
 
 ## 3. Polynomial Regression
+
+Polynomial Regression is a special case of Linear Regression where we fit the polynomial equation on the data with a curvilinear relationship between the dependent and independent variables. It is a form of regression analysis in which the relationship between the independent variables and dependent variables are modeled in the nth degree polynomial. 
+Polynomial Regression models are usually fit with the method of least squares.The least square method minimizes the variance of the coefficients,under the Gauss Markov Theorem. 
+![PolynomialRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/PolynomialRegression.png)
+Polynomial Regression does not require the relationship between the independent and dependent variables to be linear in the data set,This is also one of the main difference between the Linear and Polynomial Regression. It is generally used when the points in the data are not captured by the Linear Regression Model and the Linear Regression fails in describing the best result clearly.
 
 ## 4. Decision Tree Regression
 
@@ -101,9 +126,11 @@ Model evaluation leads a Data Scientist in the right direction to select or tune
 
 https://scikit-learn.org/
 
-https://www.statisticssolutions.com/what-is-linear-regression/
+https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2
 
 https://www.statisticssolutions.com/what-is-logistic-regression/
+
+https://medium.com/analytics-vidhya/understanding-polynomial-regression-5ac25b970e18
 
 https://data-flair.training/blogs/svm-support-vector-machine-tutorial/
 
