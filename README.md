@@ -9,6 +9,7 @@ This technique is used for forecasting, time series modelling and finding the ca
 ## 1. Linear Regression
 
 The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable). When there is only feature it is called Uni-variate Linear Regression and if there are multiple features, it is called Multiple Linear Regression.
+
 ![DiffLinearRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/DiffLinearRegression.png)
 
 The linear regression model can be represented by the following equation
@@ -21,6 +22,7 @@ The linear regression model can be represented by the following equation
 **x₁, x₂,…,xₙ** are the feature values.
 
 The line for which the the error between the predicted values and the observed values is minimum is called the best fit line or the regression line. These errors are also called as residuals. The residuals can be visualized by the vertical lines from the observed data value to the regression line.
+
 ![LinearRegressionLine](https://github.com/Ansu-John/Regression-Models/blob/main/resources/LinearRegressionLine.png)
 
 To define and measure the error of our model we define the cost function as the sum of the squares of the residuals. The cost function is denoted by
@@ -61,13 +63,15 @@ Three or more categories with ordering. Example: Movie rating from 1 to 5
 ## 3. Polynomial Regression
 
 Polynomial Regression is a special case of Linear Regression where we fit the polynomial equation on the data with a curvilinear relationship between the dependent and independent variables. It is a form of regression analysis in which the relationship between the independent variables and dependent variables are modeled in the nth degree polynomial. 
-Polynomial Regression models are usually fit with the method of least squares.The least square method minimizes the variance of the coefficients,under the Gauss Markov Theorem. 
+Polynomial Regression models are usually fit with the method of least squares.The least square method minimizes the variance of the coefficients,under the Gauss Markov Theorem.
+
 ![PolynomialRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/PolynomialRegression.png)
 Polynomial Regression does not require the relationship between the independent and dependent variables to be linear in the data set,This is also one of the main difference between the Linear and Polynomial Regression. It is generally used when the points in the data are not captured by the Linear Regression Model and the Linear Regression fails in describing the best result clearly.
 
 ## 4. Decision Tree Regression
 
 Decision tree builds regression or classification models in the form of a tree structure. It breaks down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. A decision node has two or more branches, each representing values for the attribute tested. Leaf node represents a decision on the numerical target. The topmost decision node in a tree which corresponds to the best predictor called root node.
+
 ![DecisionTree](https://github.com/Ansu-John/Regression-Models/blob/main/resources/DecisionTree.png)
 
 Note : Tree based models are not designed to work with very sparse features. When dealing with sparse input data (e.g. categorical features with large dimension), we can either pre-process the sparse features to generate numerical statistics, or switch to a linear model, which is better suited for such scenarios.
@@ -77,6 +81,7 @@ Note : Tree based models are not designed to work with very sparse features. Whe
 A Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap Aggregation, commonly known as bagging. The trees in random forests are run in parallel. There is no interaction between these trees while building the trees.
 
 These results from the various decision trees are aggregated, through model votes or averaging, into a single ensemble model that ends up outperforming any individual decision tree’s output.
+
 ![RandomForest](https://github.com/Ansu-John/Regression-Models/blob/main/resources/RandomForest.png)
 
 ### Ensemble Learning
@@ -105,6 +110,7 @@ Support Vector Machines are a type of supervised machine learning algorithm that
 The basic principle behind the working of Support vector machines is simple – Create a hyperplane that separates the dataset into classes. Let us start with a sample problem. Suppose that for a given dataset, you have to classify red triangles from blue circles. Your goal is to create a line that classifies the data into two classes, creating a distinction between red triangles and blue circles.
 
 According to SVM, we have to find the points that lie closest to both the classes. These points are known as support vectors. In the next step, we find the proximity between our dividing plane and the support vectors. The distance between the points and the dividing line is known as margin. The aim of an SVM algorithm is to maximize this very margin. When the margin reaches its maximum, the hyperplane becomes the optimal one.
+
 ![SVM](https://github.com/Ansu-John/Regression-Models/blob/main/resources/SVM.png)
 
 The SVM model tries to enlarge the distance between the two classes by creating a well-defined decision boundary. In the above case, our hyperplane divided the data. While our data was in 2 dimensions, the hyperplane was of 1 dimension. For higher dimensions, say, an n-dimensional Euclidean Space, we have an n-1 dimensional subset that divides the space into two disconnected components.
