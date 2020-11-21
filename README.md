@@ -48,17 +48,11 @@ Logistic regression is the appropriate regression analysis to conduct when the d
 
 ### Types of Logistic Regression
 
-**1. Binary Logistic Regression**
+**1. Binary Logistic Regression** - The categorical response has only two 2 possible outcomes. Example: Spam or Not
 
-The categorical response has only two 2 possible outcomes. Example: Spam or Not
+**2. Multinomial Logistic Regression** - Three or more categories without ordering. Example: Predicting which food is preferred more (Veg, Non-Veg, Vegan)
 
-**2. Multinomial Logistic Regression**
-
-Three or more categories without ordering. Example: Predicting which food is preferred more (Veg, Non-Veg, Vegan)
-
-**3. Ordinal Logistic Regression**
-
-Three or more categories with ordering. Example: Movie rating from 1 to 5
+**3. Ordinal Logistic Regression** - Three or more categories with ordering. Example: Movie rating from 1 to 5
 
 ## 3. Polynomial Regression
 
