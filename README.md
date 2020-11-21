@@ -60,6 +60,7 @@ Polynomial Regression is a special case of Linear Regression where we fit the po
 Polynomial Regression models are usually fit with the method of least squares.The least square method minimizes the variance of the coefficients,under the Gauss Markov Theorem.
 
 ![PolynomialRegression](https://github.com/Ansu-John/Regression-Models/blob/main/resources/PolynomialRegression.png)
+
 Polynomial Regression does not require the relationship between the independent and dependent variables to be linear in the data set,This is also one of the main difference between the Linear and Polynomial Regression. It is generally used when the points in the data are not captured by the Linear Regression Model and the Linear Regression fails in describing the best result clearly.
 
 ## 4. Decision Tree Regression
